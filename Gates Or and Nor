@@ -1,0 +1,91 @@
+// Study of different GATES (AND, OR, NOT, XOR), Sensors and basic binary operations.
+
+void setup() {
+
+Serial.begin(9600);
+
+int AND_RESULT1=(0)&&(0);
+
+int AND_RESULT2=(0)&&(1);
+
+int AND_RESULT3=(1)&&(0);
+
+int AND_RESULT4=(1)&&(1);
+
+int OR_RESULT1=(0)||(0);
+
+int OR_RESULT2=(0)||(1);
+
+int OR_RESULT3=(1)||(0);
+
+int OR_RESULT4=(1)||(1);
+
+Serial.print(":::AND RESULTS:::");
+
+Serial.print("\nAND_RESULT1:");
+
+Serial.println(AND_RESULT1);
+
+Serial.print("AND_RESULT2:");
+
+Serial.println(AND_RESULT2);
+
+Serial.print("AND_RESULT3:");
+
+Serial.println(AND_RESULT3);
+
+Serial.print("AND_RESULT4:");
+
+Serial.println(AND_RESULT4); 
+
+Serial.print("\n:::OR RESULTS:::");
+
+Serial.print("\nOR_RESULT1:");
+
+Serial.println(OR_RESULT1);
+
+Serial.print("OR_RESULT2:");
+
+Serial.println(OR_RESULT2);
+
+Serial.print("OR_RESULT3:");
+
+Serial.println(OR_RESULT3);
+
+Serial.print("OR_RESULT4:");
+
+Serial.println(OR_RESULT4);
+
+}
+
+void loop() {
+
+// put your main code here, to run repeatedly:
+
+int AND_Result1 = (5 > 10) && (2 > 5); 
+
+int AND_Result2 = (5 > 10) && (5 < 10); 
+
+int AND_Result3 = (2 < 5) && (5 > 10); 
+
+int AND_Result4 = (2 < 5) && (2 < 4); 
+
+Serial.print("AND_Result1:"); 
+
+Serial.println(AND_Result1); 
+
+Serial.print("AND_Result2:"); 
+
+Serial.println(AND_Result2); 
+
+Serial.print("AND_Result3:"); 
+
+Serial.println(AND_Result3); 
+
+Serial.print("AND_Result4:"); 
+
+Serial.println(AND_Result4); 
+
+delay(1000);
+
+}
