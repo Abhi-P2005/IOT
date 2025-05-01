@@ -1,0 +1,101 @@
+//Create a program that illuminates the green LED if the counter is less than 100, illuminates the 
+
+yellow LED if the counter is between 101 and 200 and illuminates the red LED if the counter is 
+
+greater than 200 Outcome: Connectivity, configuration and control of LED using Arduino circuit under 
+
+different conditions.
+
+int green = 2;
+
+int yellow = 3;
+
+int red =4; 
+
+int i;
+
+void setup()
+
+{
+
+pinMode(green, OUTPUT);
+
+pinMode(yellow, OUTPUT);
+
+pinMode(red, OUTPUT);
+
+}
+
+void loop()
+
+{
+
+changeLights();
+
+}
+
+void changeLights()
+
+{
+
+for(i=0;i<=300;i+=20)
+
+{
+
+if(i<=100)
+
+{
+
+digitalWrite(green, HIGH);
+
+delay(100);
+
+digitalWrite(green, LOW);
+
+delay(100);
+
+digitalWrite(yellow, LOW);
+
+digitalWrite(red, LOW);
+
+}
+
+else if(i>100 && i<200)
+
+{
+
+digitalWrite(yellow, HIGH);
+
+delay(100);
+
+digitalWrite(yellow, LOW);
+
+delay(100);
+
+digitalWrite(green, LOW);
+
+digitalWrite(red, LOW);
+
+}
+
+else if(i>=200 && i<=300)
+
+{
+
+digitalWrite(red,HIGH);
+
+delay(100);
+
+digitalWrite(red,LOW);
+
+delay(100);
+
+digitalWrite(green,LOW);
+
+digitalWrite(yellow,LOW);
+
+}
+
+}
+
+}
