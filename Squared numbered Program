@@ -1,0 +1,55 @@
+// Write a program that asks the user for a number and outputs the number squared that is 
+
+entered .
+
+void setup() {
+
+// Start the serial communication
+
+Serial.begin(9600);
+
+// Give instructions to the user
+
+Serial.println("Enter a number to square:");
+
+}
+
+void loop() {
+
+// Check if data is available in the serial buffer
+
+if (Serial.available() > 0) {
+
+// Read the input as a float (handles integers and decimals)
+
+float number = Serial.parseFloat();
+
+// Wait for the newline character to clear the input buffer
+
+while (Serial.available()) {
+
+Serial.read();
+
+}
+
+// Calculate the square
+
+float squared = number * number;
+
+// Print the result
+
+Serial.print("The square of ");
+
+Serial.print(number);
+
+Serial.print(" is ");
+
+Serial.println(squared);
+
+// Ask again for the next number
+
+Serial.println("Enter another number to square:");
+
+}
+
+}
