@@ -1,0 +1,37 @@
+// Write a program to control the brightness of the LED by using potentiometer.
+
+// Pin assignment for the LED
+
+const int ledPin = 9; // PWM-capable pin
+
+// Pin assignment for the potentiometer
+
+const int potPin = A0; // Analog pin to read potentiometer value
+
+void setup() {
+
+ // Set the LED pin as an output
+
+ pinMode(ledPin, OUTPUT);
+
+}
+
+void loop() {
+
+ // Read the potentiometer value (range from 0 to 1023)
+
+ int potValue = analogRead(potPin);
+
+ // Map the potentiometer value to PWM range (0 to 255)
+
+ int brightness = map(potValue, 0, 1023, 0, 255);
+
+ // Set the LED brightness
+
+ analogWrite(ledPin, brightness);
+
+ // Small delay for stability
+
+ delay(10);
+
+}
