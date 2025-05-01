@@ -1,0 +1,27 @@
+// Write a program read the temperature sensor and send the values to the serial monitor on the 
+
+computer.
+
+// Define the analog pin connected to the temperature sensor
+
+const int sensorPin = A0; // LM35 analog output to A0
+
+float temperatureC; // Variable to store temperature in Celsius
+
+void setup() {
+
+Serial.begin(9600); // Start serial communication at 9600 baud rate
+
+}
+
+void loop() {
+
+int sensorValue = analogRead(sensorPin); // Read analog value from sensor
+
+temperatureC = (sensorValue * 5.0 / 1023.0) * 100; // Convert to Celsius
+
+Serial.print("Temperature (C): ");
+
+Serial.println(temperatureC); // Send temperature to Serial Monitor
+
+delay(1000); // Wait for 1 second before reading again
