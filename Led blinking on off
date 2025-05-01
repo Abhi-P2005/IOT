@@ -1,0 +1,63 @@
+// Write a program using Arduino to control LED (One or more ON/OFF). Or Blinking
+
+// Define the pin numbers for two LEDs
+
+const int led = 13;
+
+const int led1 = 12;
+
+const int led2 = 11;
+
+const int led3 = 10;
+
+void setup() {
+
+// put your setup code here, to run once:
+
+pinMode(led, OUTPUT);
+
+pinMode(led1, OUTPUT);
+
+pinMode(led2, OUTPUT);
+
+pinMode(led3, OUTPUT);
+
+}
+
+void loop() {
+
+// put your main code here, to run repeatedly ON or OFF:
+
+digitalWrite(led,HIGH);
+
+delay(100);
+
+digitalWrite(led,LOW);
+
+delay(100);
+
+digitalWrite(led1,HIGH);
+
+delay(10);
+
+digitalWrite(led1,LOW);
+
+delay(10);
+
+digitalWrite(led2,HIGH);
+
+delay(100);
+
+digitalWrite(led2,LOW);
+
+delay(100);
+
+digitalWrite(led3,HIGH);
+
+delay(10);
+
+digitalWrite(led3,LOW);
+
+delay(10);
+
+}
